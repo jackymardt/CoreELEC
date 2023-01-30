@@ -2,8 +2,8 @@
 # Copyright (C) 2016-present Team LibreELEC (https://libreelec.tv)
 
 PKG_NAME="game.libretro.bsnes-mercury-balanced"
-PKG_VERSION="0.94.0.18-Matrix"
-PKG_SHA256="94db5bc1b6cf25d827e92d7879fad0267805bad67455ae140df26ae3da4f1f83"
+PKG_VERSION="0.94.0.22-Matrix"
+PKG_SHA256="f4380b57998de6e5b2f9d0b04cf52cb69308679e8e5494e7394c178d6d1f8c12"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="GPL"

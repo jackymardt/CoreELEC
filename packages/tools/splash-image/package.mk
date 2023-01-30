@@ -2,8 +2,8 @@
 # Copyright (C) 2020 present Team CoreELEC (https://coreelec.org)
 
 PKG_NAME="splash-image"
-PKG_VERSION="b055e1576478771d856939a32f954e587fb434a9"
-PKG_SHA256="88a6b9e690d30d4bd18918d1f69d05ce7052e0c70aeab5de9601272a2543d297"
+PKG_VERSION="82aaea90d1845e0988371791b5e568b8122ca294"
+PKG_SHA256="febccc1e6b6a7d5b79ca7e283a1c09ed965001373ce6956e7d3057aca4c92a65"
 PKG_LICENSE="GPL"
 PKG_SITE="https://coreelec.org"
 PKG_URL="https://github.com/CoreELEC/splash-image/archive/${PKG_VERSION}.tar.gz"

@@ -138,7 +138,7 @@
     </spicc1_off>
   </spicc1>
 
-  <dvb status="off" version="0">
+  <dvb status="off" version="2">
     <dvb_on name="on">
       <cmd path="/dvb status" type="s" >
         <value>okay</value>
@@ -239,5 +239,84 @@
       </cmd>
     </int_phy>
   </int_ext_phy>
+
+  <k_usb3_pcie status="USB3" dt_id="khadas_vim3*" version="0">
+    <k_usb3 name="USB3">
+      <cmd path="/usb3phy@ffe09080 status" type="s" >
+        <value>okay</value>
+      </cmd>
+      <cmd path="/pcieA@fc000000 status" type="s" >
+        <value>disabled</value>
+      </cmd>
+    </k_usb3>
+    <k_pcie name="PCIE">
+      <cmd path="/usb3phy@ffe09080 status" type="s" >
+        <value>disabled</value>
+      </cmd>
+      <cmd path="/pcieA@fc000000 status" type="s" >
+        <value>okay</value>
+      </cmd>
+    </k_pcie>
+  </k_usb3_pcie>
+
+  <ip1001 status="migrated" dt_id="sm1_s905x3*1gbit" version="1">
+    <ip1001_n_a name="n/a">
+      <cmd path="/ethernet@ff3f0000 mc_val" type="x" >
+        <value>0x1621</value>
+      </cmd>
+      <cmd path="/ethernet@ff3f0000 cali_val" type="x" >
+        <value>0x10000</value>
+      </cmd>
+      <cmd path="/ethernet@ff3f0000 rx_delay" type="i" >
+        <value>0</value>
+      </cmd>
+      <cmd path="/ethernet@ff3f0000 auto_cali_idx" type="i" >
+        <value>0</value>
+      </cmd>
+    </ip1001_n_a>
+    <ip1001_a name="assembled">
+      <cmd path="/ethernet@ff3f0000 mc_val" type="x" >
+        <value>0x1609</value>
+      </cmd>
+      <cmd path="/ethernet@ff3f0000 cali_val" type="x" >
+        <value>0xc0000</value>
+      </cmd>
+      <cmd path="/ethernet@ff3f0000 rx_delay" option="d" />
+      <cmd path="/ethernet@ff3f0000 auto_cali_idx" option="d" />
+    </ip1001_a>
+  </ip1001>
+
+  <smartchip status="migrated" dt_id="gxl_*" version="1">
+    <smartchip_disabled name="Disabled">
+      <cmd path="/smartchip_wifi_driver/ compatible" type="s" >
+        <value>smartchip,disabled</value>
+      </cmd>
+      <cmd path="/sdio@d0070000/sdio dmode" option="d" />
+    </smartchip_disabled>
+    <s9083s name="S-9083">
+      <cmd path="/smartchip_wifi_driver/ compatible" type="s" >
+        <value>smartchip,s9083s</value>
+      </cmd>
+      <cmd path="/sdio@d0070000/sdio dmode" type="s" >
+        <value>pio</value>
+      </cmd>
+    </s9083s>
+    <s9188s name="S-9188">
+      <cmd path="/smartchip_wifi_driver/ compatible" type="s" >
+        <value>smartchip,s9188s</value>
+      </cmd>
+      <cmd path="/sdio@d0070000/sdio dmode" type="s" >
+        <value>pio</value>
+      </cmd>
+    </s9188s>
+    <richv300 name="RICHV300">
+      <cmd path="/smartchip_wifi_driver/ compatible" type="s" >
+        <value>smartchip,richv300s</value>
+      </cmd>
+      <cmd path="/sdio@d0070000/sdio dmode" type="s" >
+        <value>pio</value>
+      </cmd>
+    </richv300>
+  </smartchip>
 
 </dtb-settings>

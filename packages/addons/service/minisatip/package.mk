@@ -2,14 +2,14 @@
 # Copyright (C) 2016-present Team LibreELEC (https://libreelec.tv)
 
 PKG_NAME="minisatip"
-PKG_VERSION="1.1.44"
-PKG_SHA256="0f4785640b7d179d0c0a22951f42d9dca7eb5cae96790887cb1d74ea9078f0c4"
-PKG_REV="107"
+PKG_VERSION="1.2.49"
+PKG_SHA256="067ccbdf2ab1ff62b8daa9f8f515478b5709a2b6c7cd9fe3099738048f7892d3"
+PKG_REV="113"
 PKG_ARCH="any"
 PKG_LICENSE="GPL"
 PKG_SITE="https://github.com/catalinii/minisatip"
 PKG_URL="https://github.com/catalinii/minisatip/archive/refs/tags/v${PKG_VERSION}.tar.gz"
-PKG_DEPENDS_TARGET="toolchain dvb-apps libdvbcsa libxml2 openssl"
+PKG_DEPENDS_TARGET="toolchain libdvbcsa libxml2 openssl"
 PKG_SECTION="service"
 PKG_SHORTDESC="minisatip: a Sat>IP streaming server for Linux"
 PKG_LONGDESC="minisatip(${PKG_VERSION_NUMBER}): is a Sat>IP streaming server for Linux supporting DVB-C, DVB-S/S2, DVB-T/T2, ATSC and ISDB-T"
@@ -29,10 +29,6 @@ PKG_CONFIGURE_OPTS_TARGET="--enable-static \
 pre_configure_target() {
   cd ${PKG_BUILD}
     rm -rf .${TARGET_NAME}
-
-  # enables Common Interface (DVBEN50221)
-  CFLAGS+=" -I$(get_install_dir dvb-apps)/usr/include"
-  LDFLAGS+=" -L$(get_install_dir dvb-apps)/usr/lib"
 }
 
 makeinstall_target() {

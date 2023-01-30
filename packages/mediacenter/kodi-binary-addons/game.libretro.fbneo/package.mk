@@ -2,8 +2,8 @@
 # Copyright (C) 2021-present Team LibreELEC (https://libreelec.tv)
 
 PKG_NAME="game.libretro.fbneo"
-PKG_VERSION="1.0.0.42-Matrix"
-PKG_SHA256="f5e9533bbb4be9f369e1cc1bb6cb2fc8ffc720ac0259ae6d8cdbfd8285d50ca9"
+PKG_VERSION="1.0.0.52-Matrix"
+PKG_SHA256="0ce78e9250a36474fefa432582056a706955f087362349b829c494049188289e"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="GPL"

@@ -1092,7 +1092,7 @@ Signed-off-by: Jonas Karlman <jonas@kwiboo.se>
  1 file changed, 8 insertions(+)
 
 diff --git a/drivers/mmc/core/core.c b/drivers/mmc/core/core.c
-index b5f3f160c842..6eb76c6cfd45 100644
+index eb82f6aac951..16639d2b6c2b 100644
 --- a/drivers/mmc/core/core.c
 +++ b/drivers/mmc/core/core.c
 @@ -1352,6 +1352,14 @@ void mmc_power_off(struct mmc_host *host)
